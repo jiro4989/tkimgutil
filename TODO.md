@@ -3,6 +3,7 @@
 - [ ] config.tomlの自動生成、初期生成処理の追加
 - [ ] WindowsでSortコマンドの有無を確認
 - [ ] 減色コマンドの追加
+- [ ] workerスレッド式の並列処理に修正
 - [x] windows用にfindコマンドを実装
 - [x] Makefileとscriptの整備
 - [x] Makefileにリリースタスクの追加

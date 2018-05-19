@@ -14,7 +14,7 @@ MAIN_FILES := main.go commands.go
 COPY_FILES := README.md CHANGELOG.md
 
 # 配布物の出力先
-DIST_DIR   := dist/$(VERSION)
+DIST_DIR := dist/$(VERSION)
 
 .PHONY: run
 run:
@@ -73,6 +73,11 @@ clean:
 	-rm -rf dist/paste
 	-rm -rf dist/scale
 	-rm -rf dist/trim
+
+.PHONY: test
+test:
+	gometalinter --vendor=vendor ./...
+	GOCACHE=off go test ./...
 
 .PHONY: var-check
 var-check:
